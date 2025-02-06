@@ -3,36 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <link href="./output.css" rel="stylesheet">
-    <title>Frontend Mentor | Room homepage</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Room homepage</title>
   </head>
 
-  <body>
-    Home Shop About Contact Discover innovative ways to decorate We provide
-    unmatched quality, comfort, and style for property owners across the
-    country. Our experts combine form and function in bringing your vision to
-    life. Create a room in your own style with our collection and make your
-    property a reflection of you and what you love. Shop now We are available
-    all across the globe With stores all over the world, it's easy for you to
-    find furniture for your home or place of business. Locally, we’re in most
-    major cities throughout the country. Find the branch nearest you using our
-    store locator. Any questions? Don't hesitate to contact us today. Shop now
-    Manufactured with the best materials Our modern furniture store provide a
-    high level of quality. Our company has invested in advanced technology to
-    ensure that every product is made as perfect and as consistent as possible.
-    With three decades of experience in this industry, we understand what
-    customers want for their home and office. Shop now About our furniture Our
-    multifunctional collection blends design and function to suit your
-    individual taste. Make each room unique, or pick a cohesive theme that best
-    express your interests and what inspires you. Find the furniture pieces you
-    need, from traditional to contemporary styles or anything in between.
-    Product specialists are available to help you create your dream space.
+  <body class="relative flex flex-col min-h-screen">
+    <!-- Overlay (hidden by default) -->
+    <div id="overlay" class="fixed inset-0 bg-black opacity-40 hidden z-40"></div>
+
+    <!-- Sliding Menu -->
+    <div id="menu" class="fixed top-0 left-0 w-full h-[13vh] bg-white shadow-md transform -translate-y-full transition-transform duration-300 ease-in-out flex items-center z-60 px-6">
+      <div class="flex-grow-[2]">
+        <img id="close-menu" src="../images/icon-close.svg" alt="Close icon" class="cursor-pointer h-3.5 w-auto">
+      </div>
+    
+      <nav class="flex-grow flex justify-end space-x-6 font-primary text-brand-black text-base tracking-[-0.6px] font-medium">
+        <a href="#">home</a>
+        <a href="#">shop</a>
+        <a href="#">about</a>
+        <a href="#">contact</a>
+      </nav>
+    </div>
+
+    <section class="flex-col">
+      <div class="relative bg-[url(../images/mobile-image-hero-1.jpg)] bg-cover bg-center w-full h-[50vh]">
+        <div class="flex flex-row px-8 py-12 justify-start">
+          <img id="menu-button" src="../images/icon-hamburger.svg" alt="Hamburger icon" class="cursor-pointer z-50" />
+          <div class="flex-1 flex justify-center">
+            <img src="../images/logo.svg" alt="Logo" />
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 right-0 flex h-14">
+          <div class="p-5 bg-brand-black flex items-center justify-center cursor-pointer">
+            <img src="../images/icon-angle-left.svg" alt="Arrow pointing to the left" class="w-auto h-5.5">
+          </div>
+          <div class="p-5 bg-brand-black flex items-center justify-center cursor-pointer">
+            <img src="../images/icon-angle-right.svg" alt="Arrow pointing to the right" class="w-auto h-5.5">
+          </div>
+        </div>
+      </div>
+
+      <div class="px-8 py-12">
+        <h1 class="font-primary font-medium text-4xl tracking-[-1.5px] mb-3">
+          Discover innovative ways to decorate
+        </h1>
+        <p class="font-primary font-normal text-base text-dark-gray mb-9">
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <div class="flex flex-row justify-start gap-7 align-middle">
+          <p class="font-primary font-medium text-base tracking-[12.5px]">
+            SHOP NOW
+          </p>
+          <img src="../images/icon-arrow.svg" alt="Arrow pointing to the right" class="object-contain" />
+        </div>
+      </div>
+    </section>
+    <script src="../js/menu.js"></script>
   </body>
 </html>
