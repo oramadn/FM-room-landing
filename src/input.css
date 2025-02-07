@@ -17,4 +17,17 @@
     display: flex;
     justify-content: center;
   }
+
+  .nav-item {
+    @apply relative text-base tracking-[-0.66px] font-semibold text-brand-white cursor-pointer;
+  }
+
+  .nav-item::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 w-0 h-[2px] bg-brand-white transition-all duration-300;
+  }
+
+  .nav-item:hover::after {
+    @apply w-full;
+  }
 }

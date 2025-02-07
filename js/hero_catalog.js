@@ -8,13 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
     slider.style.transform = `translateX(-${currentIndex * 100}%)`;
   }
 
-  document.querySelector(".left-arrow").addEventListener("click", function () {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-    updateSlide();
+  const leftArrows = document.querySelectorAll(".left-arrow");
+  const rightArrows = document.querySelectorAll(".right-arrow");
+
+  leftArrows.forEach((arrow) => {
+    arrow.addEventListener("click", function () {
+      currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+      updateSlide();
+    });
   });
 
-  document.querySelector(".right-arrow").addEventListener("click", function () {
-    currentIndex = (currentIndex + 1) % totalImages;
-    updateSlide();
+  rightArrows.forEach((arrow) => {
+    arrow.addEventListener("click", function () {
+      currentIndex = (currentIndex + 1) % totalImages;
+      updateSlide();
+    });
   });
 });
