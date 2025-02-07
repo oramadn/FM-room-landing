@@ -3,22 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
     <link href="./output.css" rel="stylesheet" />
     <title>Room homepage</title>
   </head>
 
   <body class="relative flex flex-col min-h-screen">
     <!-- Overlay (hidden by default) -->
-    <div id="overlay" class="fixed inset-0 bg-black opacity-40 hidden z-40"></div>
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black opacity-40 hidden z-40"
+    ></div>
 
     <!-- Sliding Menu -->
-    <div id="menu" class="fixed top-0 left-0 w-full h-[13vh] bg-white shadow-md transform -translate-y-full transition-transform duration-300 ease-in-out flex items-center z-60 px-6">
+    <div
+      id="menu"
+      class="fixed top-0 left-0 w-full h-[13vh] bg-white shadow-md transform -translate-y-full transition-transform duration-300 ease-in-out flex items-center z-60 px-6"
+    >
       <div class="flex-grow-[2]">
-        <img id="close-menu" src="../images/icon-close.svg" alt="Close icon" class="cursor-pointer h-3.5 w-auto">
+        <img
+          id="close-menu"
+          src="../images/icon-close.svg"
+          alt="Close icon"
+          class="cursor-pointer h-3.5 w-auto"
+        />
       </div>
-    
-      <nav class="flex-grow flex justify-end space-x-6 font-primary text-brand-black text-base tracking-[-0.6px] font-medium">
+
+      <nav
+        class="flex-grow flex justify-end space-x-6 font-primary text-brand-black text-base tracking-[-0.6px] font-medium"
+      >
         <a href="#">home</a>
         <a href="#">shop</a>
         <a href="#">about</a>
@@ -27,20 +45,60 @@
     </div>
 
     <section class="flex-col">
-      <div class="relative bg-[url(../images/mobile-image-hero-1.jpg)] bg-cover bg-center w-full h-[50vh]">
-        <div class="flex flex-row px-8 py-12 justify-start">
-          <img id="menu-button" src="../images/icon-hamburger.svg" alt="Hamburger icon" class="cursor-pointer z-50" />
+      <div class="relative w-full h-[50vh] overflow-hidden">
+        <!-- Slider container -->
+        <div
+          id="slider"
+          class="flex w-full h-full transition-transform duration-500 ease-in-out"
+        >
+          <img
+            src="../images/mobile-image-hero-1.jpg"
+            class="w-full h-full object-cover"
+          />
+          <img
+            src="../images/mobile-image-hero-2.jpg"
+            class="w-full h-full object-cover"
+          />
+          <img
+            src="../images/mobile-image-hero-3.jpg"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Navbar -->
+        <div
+          class="absolute top-0 left-0 w-full flex flex-row px-8 py-12 justify-start"
+        >
+          <img
+            id="menu-button"
+            src="../images/icon-hamburger.svg"
+            alt="Hamburger icon"
+            class="cursor-pointer z-50"
+          />
           <div class="flex-1 flex justify-center">
             <img src="../images/logo.svg" alt="Logo" />
           </div>
         </div>
 
+        <!-- Arrows for navigation -->
         <div class="absolute bottom-0 right-0 flex h-14">
-          <div class="p-5 bg-brand-black flex items-center justify-center cursor-pointer">
-            <img src="../images/icon-angle-left.svg" alt="Arrow pointing to the left" class="w-auto h-5.5">
+          <div
+            class="p-5 bg-brand-black flex items-center justify-center cursor-pointer left-arrow"
+          >
+            <img
+              src="../images/icon-angle-left.svg"
+              alt="Arrow left"
+              class="w-auto h-5.5"
+            />
           </div>
-          <div class="p-5 bg-brand-black flex items-center justify-center cursor-pointer">
-            <img src="../images/icon-angle-right.svg" alt="Arrow pointing to the right" class="w-auto h-5.5">
+          <div
+            class="p-5 bg-brand-black flex items-center justify-center cursor-pointer right-arrow"
+          >
+            <img
+              src="../images/icon-angle-right.svg"
+              alt="Arrow right"
+              class="w-auto h-5.5"
+            />
           </div>
         </div>
       </div>
@@ -60,10 +118,15 @@
           <p class="font-primary font-medium text-base tracking-[12.5px]">
             SHOP NOW
           </p>
-          <img src="../images/icon-arrow.svg" alt="Arrow pointing to the right" class="object-contain" />
+          <img
+            src="../images/icon-arrow.svg"
+            alt="Arrow pointing to the right"
+            class="object-contain"
+          />
         </div>
       </div>
     </section>
     <script src="../js/menu.js"></script>
+    <script src="../js/hero_catalog.js"></script>
   </body>
 </html>
