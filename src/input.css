@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
 @import "tailwindcss";
@@ -8,4 +9,12 @@
   --color-brand-black: hsl(0, 0%, 0%);
   --color-brand-white: hsl(0, 0%, 100%);
   --color-very-dark-gray: hsl(0, 0%, 27%);
+}
+
+@layer components {
+  .image-slide {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+  }
 }

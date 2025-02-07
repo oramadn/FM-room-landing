@@ -51,18 +51,55 @@
           id="slider"
           class="flex w-full h-full transition-transform duration-500 ease-in-out"
         >
-          <img
-            src="../images/mobile-image-hero-1.jpg"
-            class="w-full h-full object-cover"
-          />
-          <img
-            src="../images/mobile-image-hero-2.jpg"
-            class="w-full h-full object-cover"
-          />
-          <img
-            src="../images/mobile-image-hero-3.jpg"
-            class="w-full h-full object-cover"
-          />
+          <!-- Mobile and Desktop images with picture element for responsive images -->
+          <div class="image-slide flex-shrink-0">
+            <picture>
+              <source
+                media="(max-width: 1024px)"
+                srcset="../images/mobile-image-hero-1.jpg"
+              />
+              <source
+                media="(min-width: 1025px)"
+                srcset="../images/desktop-image-hero-1.jpg"
+              />
+              <img
+                src="../images/mobile-image-hero-1.jpg"
+                class="w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+          <div class="image-slide flex-shrink-0">
+            <picture>
+              <source
+                media="(max-width: 1024px)"
+                srcset="../images/mobile-image-hero-2.jpg"
+              />
+              <source
+                media="(min-width: 1025px)"
+                srcset="../images/desktop-image-hero-2.jpg"
+              />
+              <img
+                src="../images/mobile-image-hero-2.jpg"
+                class="w-full h-full object-cover"
+              />
+            </picture>
+          </div>
+          <div class="image-slide flex-shrink-0">
+            <picture>
+              <source
+                media="(max-width: 1024px)"
+                srcset="../images/mobile-image-hero-3.jpg"
+              />
+              <source
+                media="(min-width: 1025px)"
+                srcset="../images/desktop-image-hero-3.jpg"
+              />
+              <img
+                src="../images/mobile-image-hero-3.jpg"
+                class="w-full h-full object-cover"
+              />
+            </picture>
+          </div>
         </div>
 
         <!-- Navbar -->
