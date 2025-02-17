@@ -20,7 +20,7 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/oramadn/FM-room-landing)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://oramadn.github.io/FM-room-landing/)
 
 ## My process
 
